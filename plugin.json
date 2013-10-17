@@ -1,0 +1,30 @@
+{
+	"description" : "Displays important MEMCACHED metrics",
+	"icon" : "icon.png",
+	"command" : "node index.js",
+	"postExtract" : "npm install",
+	"ignore" : "node_modules",
+	"metrics" : ["MEMCACHED_ALLOCATED", "MEMCACHED_CONNECTIONS", "MEMCACHED_HITS", "MEMCACHED_MISSES", "MEMCACHED_ITEMS",
+				 "MEMCACHED_REQUESTS", "MEMCACHED_NETWORK_IN", "MEMCACHED_NETWORK_OUT"],
+	"paramSchema" : [
+		{
+			"title" : "Source",
+			"name" : "source",
+			"description" : "The source to display in the legend for the MEMCACHED data.",
+			"type" : "string"
+		},
+		{
+			"title" : "Port",
+			"name" : "port",
+			"description" : "The MEMCACHED port.",
+			"type" : "integer",
+			"default" : 11211
+		},
+		{
+			"title" : "Host",
+			"name" : "host",
+			"description" : "The MEMCACHED hostname.",
+			"type" : "string"
+		}
+	]
+}
