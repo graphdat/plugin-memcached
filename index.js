@@ -1,15 +1,17 @@
 var _param = require('./param.json');
 var _os = require('os');
-var _memcached = require('memcache');
+var _memcached = require('mc');
 
+var _client = new _memcached.Client((_param.host || 'localhost') + ':' + (_param.port || 11211));
 
-var _client = new _memcached.Client(_param.port || 11211, _param.host || 'localhost');
-
-_client.on('error', function (err) {
-	console.error('Unexpected error: ' + err.toString());
+_client.connect(function(err)
+{
+	if (err)
+	{
+		console.error('connection error: %s', err);
+		process.exit(1);
+	}
 });
-
-_client.connect();
 
 var _pollInterval = _param.pollInterval || 1000;
 var _source = _param.source || _os.hostname();
@@ -38,6 +40,8 @@ function poll()
 		if (err)
 			return console.error(err);
 
+		data = data[0];
+
 		// Report
 		console.log('MEMCACHED_ALLOCATED %d %s', data.bytes / data.limit_maxbytes, _source);
 		console.log('MEMCACHED_CONNECTIONS %d %s', data.curr_connections, _source);
@@ -47,7 +51,6 @@ function poll()
 		console.log('MEMCACHED_REQUESTS %d %s', accum(data, 'cmd_get') + accum(data, 'cmd_set'), _source);
 		console.log('MEMCACHED_NETWORK_IN %d %s', accum(data, 'bytes_read'), _source);
 		console.log('MEMCACHED_NETWORK_OUT %d %s', accum(data, 'bytes_written'), _source);
-
 	});
 
 	setTimeout(poll, _pollInterval);

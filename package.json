@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"private": true,
 	"dependencies": {
-		"memcache" : "0.3.0"
+		"mc" : "1.0.6"
 	},
 	"engine": "node >= 0.8.1"
 }
