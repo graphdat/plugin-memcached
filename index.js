@@ -4,15 +4,6 @@ var _memcached = require('mc');
 
 var _client = new _memcached.Client((_param.host || 'localhost') + ':' + (_param.port || 11211));
 
-_client.connect(function(err)
-{
-	if (err)
-	{
-		console.error('connection error: %s', err);
-		process.exit(1);
-	}
-});
-
 var _pollInterval = _param.pollInterval || 1000;
 var _source = _param.source || _os.hostname();
 
@@ -56,4 +47,13 @@ function poll()
 	setTimeout(poll, _pollInterval);
 }
 
-poll();
+_client.connect(function(err)
+{
+	if (err)
+	{
+		console.error('connection error: %s', err);
+		process.exit(1);
+	}
+	else
+		poll();
+});
