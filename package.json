@@ -5,6 +5,7 @@
 	"main": "index.js",
 	"private": true,
 	"dependencies": {
+		"graphdat-plugin-tools" : "0.0.1",
 		"mc" : "1.0.6"
 	},
 	"engine": "node >= 0.8.1"
