@@ -1,6 +1,7 @@
 var _param = require('./param.json');
 var _os = require('os');
 var _memcached = require('mc');
+var _tools = require('graphdat-plugin-tools');
 
 var _client = new _memcached.Client((_param.host || 'localhost') + ':' + (_param.port || 11211));
 
