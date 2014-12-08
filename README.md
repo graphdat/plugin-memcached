@@ -11,6 +11,7 @@ Collects metrics from a memcached instance.
 
 ### Prerequisites
 - node version 0.8.0 or later
+- npm version 1.4.21 or later
 
 ### Plugin Setup
 None
