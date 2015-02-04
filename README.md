@@ -1,7 +1,7 @@
 Boundary Memcached Plugin
 -------------------------
 
-Collects metrics from a memcached instance.
+Collects metrics from a memcached instance. See video [walkthrough](https://help.boundary.com/hc/articles/201816101).
 
 ### Prerequisites
 
