@@ -30,6 +30,7 @@ To get the new meter:
 - [How to install node.js?](https://help.boundary.com/hc/articles/202360701)
 
 ### Plugin Setup
+
 None
 
 ### Plugin Configuration Fields
