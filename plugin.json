@@ -4,8 +4,16 @@
 	"command" : "node index.js",
 	"postExtract" : "npm install",
 	"ignore" : "node_modules",
-	"metrics" : ["MEMCACHED_ALLOCATED", "MEMCACHED_CONNECTIONS", "MEMCACHED_HITS", "MEMCACHED_MISSES", "MEMCACHED_ITEMS",
-				 "MEMCACHED_REQUESTS", "MEMCACHED_NETWORK_IN", "MEMCACHED_NETWORK_OUT"],
+	"metrics" : [
+		"MEMCACHED_ALLOCATED",
+		"MEMCACHED_CONNECTIONS",
+		"MEMCACHED_HITS",
+		"MEMCACHED_ITEMS",
+		"MEMCACHED_MISSES",
+		"MEMCACHED_NETWORK_IN",
+		"MEMCACHED_NETWORK_OUT",
+		"MEMCACHED_REQUESTS"
+	],
 	"dashboards" : [{ "name" : "memcached", "layout" : "d-w=3&d-h=2&d-pad=5&d-bg=none&d-g-MEMCACHED_ALLOCATED=0-0-1-1&d-g-MEMCACHED_CONNECTIONS=1-0-1-1&d-g-MEMCACHED_HITS=0-1-1-1-t&d-g-MEMCACHED_MISSES=0-1-1-1-b&d-g-MEMCACHED_ITEMS=1-1-1-1&d-g-MEMCACHED_REQUESTS=2-0-1-1&d-g-MEMCACHED_NETWORK_IN=2-1-1-1-t&d-g-MEMCACHED_NETWORK_OUT=2-1-1-1-b"}],
 	"paramSchema" : [
 		{
