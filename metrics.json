@@ -1,0 +1,66 @@
+{
+  "MEMCACHED_ALLOCATED": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Percent of available memory used",
+    "displayName": "Memcached Allocated",
+    "displayNameShort": "Memcached Alloc",
+    "unit": "percent"
+  },
+  "MEMCACHED_CONNECTIONS": {
+    "defaultAggregate": "MAX",
+    "defaultResolutionMS": 1000,
+    "description": "Number of current connections",
+    "displayName": "Memcached Connections",
+    "displayNameShort": "Memcached Con",
+    "unit": "number"
+  },
+  "MEMCACHED_HITS": {
+    "defaultAggregate": "MAX",
+    "defaultResolutionMS": 1000,
+    "description": "Number of cache hits",
+    "displayName": "Memcached Hits",
+    "displayNameShort": "Memcached Hits",
+    "unit": "number"
+  },
+  "MEMCACHED_ITEMS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Total number of items in cache",
+    "displayName": "Memcached Items",
+    "displayNameShort": "Memcached Items",
+    "unit": "number"
+  },
+  "MEMCACHED_MISSES": {
+    "defaultAggregate": "MAX",
+    "defaultResolutionMS": 1000,
+    "description": "Number of cache misses",
+    "displayName": "Memcached Misses",
+    "displayNameShort": "Memcached Miss",
+    "unit": "number"
+  },
+  "MEMCACHED_NETWORK_IN": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Number of bytes read from network",
+    "displayName": "Memcached Network In",
+    "displayNameShort": "Memcached Net In",
+    "unit": "number"
+  },
+  "MEMCACHED_NETWORK_OUT": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Number of bytes written to network",
+    "displayName": "Memcached Network Out",
+    "displayNameShort": "Memcached Net Out",
+    "unit": "number"
+  },
+  "MEMCACHED_REQUESTS": {
+    "defaultAggregate": "MAX",
+    "defaultResolutionMS": 1000,
+    "description": "Number of requests",
+    "displayName": "Memcached Requests",
+    "displayNameShort": "Memcached Req",
+    "unit": "number"
+  }
+}
